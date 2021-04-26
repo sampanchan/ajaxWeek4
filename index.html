@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Ajax Week4</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="dist/css/main.css" />
+
+	
+	</head>
+
+	<body>
+		<div class="container">
+			<form method="get"  name= "business_search" class="api-form">
+				<p class="message"></p>
+				<label>Food/ Drink</label>
+				<input name="term" value="" />
+				<label>location</label>
+				<input name="location" value="Atlanta, GA" />
+				<label>Radius</label>
+				<input name="radius" value="2000" />
+				<select name="sort-by">
+					<option value="best_match">Best Match</option>
+					<option value="rating">Rating</option>
+					<option value="review_count">Review Count</option>
+					<option value="distance">Distance</option>
+				</select>
+				<div class="checkboxes_div">
+					<div class="checkboxes_flex">
+						<input type="checkbox" name="dollar" value="1">
+						<label> 💰 </label>
+					</div>
+					<div class="checkboxes_flex">
+						<input type="checkbox" name="dollar"  value="2">
+						<label> 💰💰 </label>
+					</div>
+					<div class="checkboxes_flex">
+						<input type="checkbox" name="dollar" value="3">
+						<label> 💰💰💰 </label>
+					</div>
+					<div class="checkboxes_flex">
+						<input type="checkbox" name="dollar" value="4" >
+						<label> 💰💰💰💰 </label>
+					</div>
+					
+				</div>
+				<div class="open-now">
+					<input type="checkbox" name="open-now">
+					<label for=""> 😮 Open? 😉 </label>
+
+				</div>
+				<button type="submit" class="get">Search</button>	
+			</form>
+			<div class="classResults"></div>
+		</div>
+			
+		</div>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="dist/js/yelp.js"></script>
+		<script src="dist/js/main.js"></script>
+		
+	</body>
+</html>
